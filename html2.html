@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			table{
+				text-align: center;
+				border-color: #B22222;
+			}
+		</style>
+		<script>
+			window.onload = function(){
+				var oTab = document.getElementById('tab1');
+				var oldColor = '';
+				
+				for(var i = 0; i<oTab.tBodies[0].rows.length;i++){
+					oTab.tBodies[0].rows[i].onmouseover = function(){
+						oldColor = this.style.background;
+						this.style.background = 'red';
+					};
+					
+					oTab.tBodies[0].rows[i].onmouseout = function(){
+						this.style.background = oldColor;
+					}
+					
+                    if(i % 2){
+                        oTab.tBodies[0].rows[i].style.background='';
+                    }else{
+						oTab.tBodies[0].rows[i].style.background='#CCC';
+					}
+                }
+			}
+		</script>
+	</head>
+	<body>
+		<label for="">姓名：</label><input id="" type="text"/>
+		<label for="">年龄：</label><input id="" type="text"/>
+		<label for="">成绩：</label><input id="" type="text"/>
+		<input id="" type="button" value="添加" />
+		<table id="tab1" border="2" width="600px" height="200px">
+			<thead>
+					<td>编号</td>
+					<td>姓名</td>
+					<td>年龄</td>
+					<td>成绩</td>
+					<td></td>
+			</thead>
+			<tbody>
+				<tr>
+					<td>01</td>
+					<td>小红</td>
+					<td>15</td>
+					<td>55</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>02</td>
+					<td>小兰</td>
+					<td>15</td>
+					<td>66</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>03</td>
+					<td>小吕</td>
+					<td>89</td>
+					<td>12</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>04</td>
+					<td>小紫</td>
+					<td>60</td>
+					<td>56</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>05</td>
+					<td>小白</td>
+					<td>20</td>
+					<td>23</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
+
